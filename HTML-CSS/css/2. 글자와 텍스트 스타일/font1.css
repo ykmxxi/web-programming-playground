@@ -1,0 +1,59 @@
+p.a {
+  font-style: normal;
+  font-weight: normal;
+}
+
+p.b {
+  font-style: normal;
+  font-weight: bold;
+}
+
+p.c {
+  font-style: italic;
+  font-weight: bold;
+}
+
+p.d {
+  font-style: italic;
+  font-weight: bold;
+}
+
+p.e {
+  font-style: oblique;
+  font-weight: 100;
+}
+
+p.f {
+  font-style: oblique;
+  font-weight: 900;
+}
+
+.result div {
+  margin: 12px;
+  padding: 12px;
+  border: 2px solid #ddd;
+}
+
+.result {
+  font-size: 2em;
+}
+
+#outer {
+  font-style: italic;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.result div div {
+  color: blue;
+  font-style: normal;
+  text-transform: capitalize;
+  font-weight: 100;
+  font-size: 15px;
+}
+
+.result div div div {
+  color: darkgreen;
+  font-weight: 300;
+  text-decoration: underline;
+}
