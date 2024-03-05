@@ -1,0 +1,43 @@
+.result1 {
+  text-align: center;
+}
+
+#lef {
+  text-align: left;
+}
+
+#rig {
+  text-align: right;
+}
+
+#just {
+  text-align: justify;
+}
+
+#etc {
+  text-align: left;
+  letter-spacing: 5px;
+  word-spacing: 10px;
+  line-height: 2em;
+}
+
+.result2 {
+  font-weight: 900;
+}
+
+#large {
+  text-indent: 100px;
+}
+
+ul {
+  list-style: circle;
+}
+
+/* li별로 지정하는 것도 가능 */
+ul > li:first-child {
+  list-style: "🚩 "
+}
+
+ol {
+  list-style: lower-alpha;
+}
