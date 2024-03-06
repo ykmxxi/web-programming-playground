@@ -1,0 +1,17 @@
+#keyword div div {
+  /* 키워드는 색깔 영어 */
+  background-color: aqua;
+}
+
+#rgb div div {
+  /* r g b alpha: alpha는 투명도로 낮을수록 투명, 높을수록 짙음 */
+  background-color: rgb(173, 255, 47, 0.25);
+}
+
+#hex div div {
+  background-color: #55FF9999;
+}
+
+#hsl div div {
+  background-color: hsl(360, 100%, 50%, 2.0);
+}
