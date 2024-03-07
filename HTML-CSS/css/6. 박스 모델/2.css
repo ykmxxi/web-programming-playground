@@ -1,0 +1,14 @@
+ul {
+  display: inline-block;
+}
+
+ul > li:not(:last-child){
+  border-bottom: 1px solid black;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+  border: 5px solid skyblue;
+  border-radius: 50%;
+}
