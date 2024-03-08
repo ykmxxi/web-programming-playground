@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .outer {
+      width: 200px;
+      height: 200px;
+      background-color: aliceblue;
+      border-radius: 50%;
+      overflow: hidden;
+      /* 이미지를 동그랗게 넣고 튀어 나오는 부분을 숨긴다 */
+    }
+
+    .with-bg {
+      height: 100%;
+      background-color: aqua;
+      background-image: url(./mona.png);
+      background-size: cover;
+    }
+
+    .gra {
+      width: 300px;
+      height: 200px;
+      background:
+        linear-gradient(217deg, red, transparent 70%),
+        linear-gradient(127deg, lime, transparent 70%),
+        linear-gradient(336deg, blue, transparent 70%);
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="outer">
+    <div class="with-bg"></div>
+  </div>
+  <br><br>
+  <div class="gra">
+  </div>
+
+</body>
+
+</html>
