@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .container {
+      width: 518px;
+      border: 2px solid #ddd;
+      padding: 12px 0 0 12px;
+      position: static;
+    }
+
+    .container>div {
+      display: inline-block;
+      width: 160px;
+      height: 160px;
+      margin: 0 8px 5px 0;
+      background-color: lightgray;
+    }
+
+    .container>div.orange {
+      background-color: gold;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.33);
+      position: static;
+      top: 30px;
+      left: 30px;
+    }
+
+    .red {
+      width: 48px;
+      height: 48px;
+      background-color: orangered;
+      position: absolute;
+      top: 60px;
+      left: 60px;
+    }
+
+    .res div {
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      border: 2px solid rgba(255, 255, 255, 0.33);
+    }
+
+    .red1 {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      z-index: 10;
+    }
+
+    .blue1 {
+      width: 100px;
+      height: 100px;
+      top: 96px;
+      left: 96px;
+      background-color: blue;
+      z-index: auto;
+    }
+
+    .yellow1 {
+      width: 100px;
+      height: 100px;
+      top: 160px;
+      left: 160px;
+      background-color: yellow;
+      z-index: 20;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <section class="result">
+
+    <!-- 시작 -->
+
+    <div class="container">
+
+      <div></div>
+      <div></div>
+      <div></div>
+
+      <div></div>
+      <div class="orange">
+        <div class="red"></div>
+      </div>
+      <div></div>
+
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </section>
+
+  <br><br>
+  <section class="res">
+    <div>
+      <div class="red1"></div>
+      <div class="blue1"></div>
+      <div class="yellow1"></div>
+    </div>
+  </section>
+
+
+</body>
+
+</html>
