@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .flex-con {
+      margin: 0 16px 16px 0;
+      width: 424px;
+      height: 312px;
+      background-color: #ddd;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-evenly;
+    }
+
+    .flex-item {
+      padding: 12px;
+      font-weight: bold;
+      color: white;
+      background-color: slateblue;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      min-width: 48px;
+      min-height: 48px;
+    }
+
+    .flex-item:nth-child(3)~.flex-item {
+      /* 4 ~ 12번 flex-item */
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="result">
+
+      <!-- 시작 -->
+
+      <div class="flex-con">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+        <div class="flex-item">7</div>
+        <div class="flex-item">8</div>
+        <div class="flex-item">9</div>
+        <div class="flex-item">10</div>
+        <div class="flex-item">11</div>
+        <div class="flex-item">12</div>
+      </div>
+
+      내부의 div들은 <i>min-width</i>와 <i>min-height</i>을 각각 <i>48px</i>씩 갖고 있습니다.
+      <hr>
+      <p>
+        <strong>display</strong>를 <em>flex</em>로 지정하면 플렉스 방식으로 자식 요소들을 배치하게 됩니다. <br>
+        <em>inline-flex</em>는 해당 컨테니어 요소를 인라인으로 만든다는 차이가 있습니다.
+      </p>
+      <p>
+        <strong>flex-direction</strong>은 내부 요소(아이템)들을 어느 축(가로 또는 세로)을 <br>
+        이 값에 따라 <strong>justify-content</strong>, <strong>align-items</strong>, <strong>align-content</strong> 등의 <br>
+        속성들이 작용할 방향이 결정됩니다.
+      </p>
+      <p>
+        <strong>flex-wrap</strong>은 내부 요소의 갯수 X 길이가 컨테이너를 넘어갈 때 이들을 <br>
+        여러 줄에 걸쳐 나열할지 여부를 정합니다.
+      </p>
+      <p>
+        <strong>justify-content</strong>는 메인 축에서 아이템들을 정렬할 방식을 정합니다. <br>
+        <em>flex-start(end)</em>는 <i>row(column)-reverse</i>의 영향을 받는다는 점에서 <br>
+        <em>start(end)</em>와 다릅니다. <i>flex-</i>가 붙은 것을 사용하세요.
+      </p>
+      <p>
+        <strong>align-items</strong>는 수직 축(메인 축의 반대)에서 아이템들을 정렬할 방식을 <br>
+        정합니다. <em>wrap</em>으로 아이템이 여러 줄이 되면 <strong>align-content</strong>를 <br>
+        사용해서 보다 다양한 방식으로 정렬할 수 있습니다.
+      </p>
+      <p>
+        <strong>gap</strong> 속성으로는 아이템간에 간격을 줄 수 있으며 두 개의 값을 넣어서 <br>
+        가로 간격과 세로 간격을 다르게 지정하는 것도 가능합니다.
+      </p>
+
+      <!-- 끝 -->
+
+    </section>
+  </main>
+
+</body>
+
+</html>
