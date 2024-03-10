@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .result>div {
+      display: inline-block;
+      width: 160px;
+      height: 160px;
+      line-height: 160px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: white;
+      background-color: gray;
+      cursor: pointer;
+    }
+
+    .result>div.red {
+      background-color: tomato;
+      opacity: 0; /* 요소를 감춤 */
+    }
+
+    .result>div.green {
+      background-color: olivedrab;
+      visibility: visible; /* hidden으로 바꾸면 안 보이면서 커서를 올려도 아무일 X */
+    }
+
+    .result>div.blue {
+      background-color: dodgerblue;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <section class="result">
+
+      <!-- 시작 -->
+
+      <div class="red">클릭!</div>
+      <div class="green">클릭!</div>
+      <div class="blue">클릭!</div>
+      <div>클릭!</div>
+
+      <p>
+        <strong>opacity</strong> 속성을 <em>0</em>으로 하면 모습만 감춥니다. <br>
+        스크린 리더에 따라 읽지 않을 수도 있습니다.
+      </p>
+      <p>
+        <strong>visibility</strong> 속성을 <em>hidden</em>으로 하면 위 효과에 더하여 <br>
+        마우스 오버 효과나 포커스, 클릭 등도 무효하게 됩니다. <br>
+        스크린 리더에게도 읽히지 않게 되죠.
+      </p>
+      <p>
+        <strong>display</strong> 속성을 <em>none</em>으로 하면 위 효과들에 더하여 <br>
+        자리도 차지하지 않게 됩니다.
+      </p>
+
+      <!-- 끝 -->
+
+    </section>
+    <section class="controls"></section>
+  </main>
+
+</body>
+
+</html>
