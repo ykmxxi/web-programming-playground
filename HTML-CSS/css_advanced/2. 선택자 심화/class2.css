@@ -1,0 +1,35 @@
+/* 인풋 등이 클릭되어 포커스된(입력을 받는) 상태 */
+input[type="text"]:focus {
+  /* border 밖의 선 (박스 요소가 아님) */
+  outline: 2px solid dodgerblue;
+}
+
+/* 필수 입력요소 */
+input:required {
+  border-color: orangered;
+}
+
+/* 값이 유효한 입력요소 */
+input[type="email"]:valid {
+  border-color: green;
+}
+
+/* 값이 무효한 입력요소 */
+input[type="email"]:not(:valid) {
+  border-color: purple;
+}
+
+[class*="focus"]:focus {
+  outline: 2px solid deeppink;
+}
+
+.tab-focus:focus,
+.no-focus:focus {
+  outline: none;
+}
+
+/* 탭으로 포커스된 요소에 적용 */
+/* 브라우저 지원 확인 */
+[class*="tab-focus"]:focus-visible {
+  outline: 2px solid dodgerblue;
+}
