@@ -1,0 +1,23 @@
+div {
+  margin: 0.8em;
+  padding: 0.8em;
+  background-color: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  font-weight: bold;
+}
+
+.class-label {
+  margin-right: 0.2em;
+  padding: 0.2em 0.6em;
+  font-size: 0.9em;
+  font-weight: normal;
+  color: white;
+  background-color: #777;
+  border-radius: 0.2em;
+}
+
+a {
+  display: block;
+  margin-top: 1em;
+  font-size: 1.2em;
+}

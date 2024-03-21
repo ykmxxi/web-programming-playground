@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./common.css">
+  <style>
+    .blue {
+      color: slateblue;
+    }
+
+    .green {
+      color: olivedrab;
+    }
+
+    .red {
+      color: orangered;
+    }
+
+    .parent {
+      font-weight: bold;
+      color: slateblue;
+    }
+
+    .parent>div {
+      color: olivedrab;
+    }
+
+    .parent> :last-child {
+      color: inherit;
+    }
+
+    p:not(:first-child) {
+      display: initial;
+    }
+  </style>
+
+  <title>hcs-04-03-02</title>
+</head>
+
+<body>
+
+  <div class="blue">
+    <span class="class-label">.blue</span>
+    바깥쪽 부모
+    <div>
+      속성값을 따로 지정하지 않은 자식은 부모의 속성값을 물려받습니다.
+      <div>
+        상속되는 속성들의 값은 그 아래 후손들에게도 전달되죠.
+      </div>
+    </div>
+    <div class="green">
+      <span class="class-label">.green</span>
+      자식 대에서 다른 속성값을 특정하면 부모의 것을 덮어쓰게 됩니다.
+      <div>
+        이 역시 후손들에게 대물림됩니다.
+        <div class="red">
+          <span class="class-label">.red</span>
+          역시 이처럼 다른 값으로 특정되기까지 말이죠.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+
+  <body>
+    <h1>inherit</h1>
+    <p>
+      스스로의 값을 포기하고 부모로부터 받은 상속값을 적용합니다.
+    </p>
+
+    <div class="parent">
+      <span class="class-label">.parent</span> 부모
+      <div>자식 1</div>
+      <div>자식 2</div>
+      <div>자식 3</div>
+    </div>
+  </body>
+
+  <br><br>
+  <h1>initial</h1>
+  <p>
+    브라우저가 부여한 값을 포기하고 각 속성의 초기값을 적용합니다.
+  </p>
+
+  <div>
+    <p>
+      <span class="class-label">p</span>
+      브라우저가 기본적으로 제공하는 <b>p</b>의 <em>display</em> 속성은 <strong>block</strong>이죠.
+    </p>
+    <p>
+      <span class="class-label">p</span>
+      그런데 속성값을 <em>initial</em>로 주게 되면
+    </p>
+    <p>
+      <span class="class-label">p</span>
+      이와 같이 <em>display</em> 속성의 초기값인
+    </p>
+    <p>
+      <span class="class-label">p</span>
+      <strong>inline</strong>으로 바뀌게 됩니다.
+    </p>
+  </div>
+
+</body>
+
+</html>
