@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML & CSS 04-08-02</title>
+
+  <style>
+    body {
+      padding: 24px;
+    }
+
+    section {
+      padding: 16px;
+      background-color: lightgray;
+      margin: 1em;
+      padding: 1em;
+    }
+
+    .blue,
+    .red {
+      height: 200px;
+      line-height: 200px;
+      font-size: 1.4em;
+      text-align: center;
+      color: white;
+    }
+
+    .blue {
+      float: left;
+      width: 200px;
+      background-color: slateblue;
+    }
+
+    .red {
+      float: left;
+      width: calc(100% - 200px);
+      background-color: tomato;
+    }
+
+    /* 1. 마지막에 clear된 빈 블록 요소 두기 */
+    /* 불필요한 html 요소 추가 */
+    /* .empty {
+      clear: both;
+    } */
+
+    /* 2. 부모에 overflow 속성 활용 */
+    /* 부모 밖으로 나타나야 할 요소가 있는 경우 한계 */
+    /* section {
+  overflow: hidden;
+} */
+
+    /* 3. 가상의 요소 두기 */
+    /* 가장 널리 사용되는 방법 */
+    section::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>부모의 크기 문제 해결하기</h1>
+  <p>
+    <strong>float</strong> 요소는 공간을 차지하지 않으므로, 부모 요소는 이들을 인지하지 않아 높이 계산에 적용하지 않습니다. <br>
+    이 문제를 해결하는데 다음의 방법을을 사용합니다.
+  </p>
+  <p>
+    VS Code로 옮겨 실행한 뒤, 주석을 참고하여 실습해보세요!
+  </p>
+
+  <section class="gray">
+    <div class="blue">파랑</div>
+    <div class="red">빨강</div>
+    <div class="empty"></div>
+  </section>
+
+</body>
+
+</html>
