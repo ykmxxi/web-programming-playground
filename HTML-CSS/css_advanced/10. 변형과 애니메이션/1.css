@@ -1,0 +1,46 @@
+button._1:hover {
+  background-color: darkorchid;
+  border-radius: 32px;
+}
+
+button._1 {
+  transition: all 500ms;
+}
+
+@keyframes button-hover {
+  from {
+    transform: scale(100%)
+  }
+
+  50% {
+    transform: scale(104%);
+  }
+
+  to {
+    transform: scale(100%)
+  }
+}
+
+button._2:hover {
+  animation-name: button-hover;
+  animation-duration: 200ms;
+}
+
+@keyframes move {
+  from {
+    left: -600px;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+#loading>div {
+  transform: skewX(-24deg);
+
+  animation-name: move;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}

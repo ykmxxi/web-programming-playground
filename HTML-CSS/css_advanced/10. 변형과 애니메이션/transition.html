@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML & CSS 04-10-02</title>
+
+  <style>
+    #square {
+      position: absolute;
+      top: 108px;
+      left: 24px;
+      width: 124px;
+      height: 124px;
+      border-radius: 10%;
+
+      transition: none;
+    }
+
+    label {
+      margin-right: 1em;
+    }
+
+    #left:not(:checked)~div {
+      left: 24px;
+      transition: left 2s;
+    }
+
+    #left:checked~div {
+      left: 400px;
+      transition: left 2s;
+    }
+
+    #color:not(:checked)~div {
+      background-color: tomato;
+      transition: background-color 2s;
+    }
+
+    #color:checked~div {
+      background-color: dodgerblue;
+      transition: background-color 2s;
+    }
+
+    #trans:not(:checked)~div {
+      transform: scale(1) rotate(0deg);
+      transition: transform 2s;
+    }
+
+    #trans:checked~div {
+      transform: scale(0.5) rotate(360deg);
+      transition: transform 2s;
+
+    }
+
+    p:first-of-type {
+      margin-top: 168px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <main>
+    <section class="result">
+
+      <!-- 시작 -->
+
+      <h1>transition 속성</h1>
+
+      <input type="checkbox" id="left">
+      <label for="left">오른쪽으로 이동</label>
+
+      <input type="checkbox" id="color">
+      <label for="color">파랑색으로</label>
+
+      <input type="checkbox" id="trans">
+      <label for="trans">작게 회전</label>
+
+      <div id="square"></div>
+      <p>
+        <strong>transiton</strong> 속성은 CSS 값이 달라질 때 요소에 어떤 효과로 반영될지 지정합니다. <br>
+        <em>속성</em>, <em>지속시간</em>, <em>시간함수</em>, <em>지연시간</em> 순으로 값을 넣을 수 있습니다.
+      </p>
+      <p>
+        <strong>주의!</strong> 적용할 CSS 속성이 이미 기존값이 적용되어 있어야 동작합니다.
+      </p>
+      <a href="https://developer.mozilla.org/ko/docs/Web/CSS/transition" target="_blank">
+        👉 MDN 문서 보기
+      </a>
+      <br>
+      <a href="https://cubic-bezier.com/" target="_blank">
+        👉 cubic-bezier 값 생성기
+      </a>
+
+      <!-- 끝 -->
+
+    </section>
+  </main>
+
+</body>
+
+</html>
